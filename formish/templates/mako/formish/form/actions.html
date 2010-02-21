@@ -1,4 +1,4 @@
-  <div class="actions">
+  <div class="buttonHolder">
     %for action in form._actions:
 <%
 if action.value is None:
@@ -17,6 +17,6 @@ if action.name:
     form_id.append(action.name)
 form_id = '-'.join(form_id)
 %>
-<input type="submit" id="${form_id}"${name|n}${value|n} />
+<button type="submit" class="submitButton" id="${form_id}">${action.value|n}</button>
     %endfor
   </div>

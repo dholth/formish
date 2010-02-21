@@ -2,7 +2,7 @@
 <%!
 from formish import util
 %>
-<input id="${field.cssname}" type="text" name="${field.name}" value="${field.value[0]}"
+<input id="${field.cssname}" type="text" class="textInput" name="${field.name}" value="${field.value[0]}"
 % if classes:
 ${util.classes_from_vars(classes)|n}
 % endif
