@@ -11,11 +11,11 @@ def oneify(key):
     return ','.join([try_one_base(k) for k in keys])
     %>
 % if field.error:
-<span class="error">${unicode(field.error)}</span><br />
+<p class="errorField"><strong>${unicode(field.error)}</strong></p>
 % endif
 
 % if field.contains_error:
 % for key,error in field.contained_errors:
-<span class="error">item ${oneify(key)} "${error}"</span><br />
+<p class="errorField"><strong>item ${oneify(key)} "${error}"</strong></p>
 % endfor
 % endif

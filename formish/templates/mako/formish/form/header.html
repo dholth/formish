@@ -18,4 +18,4 @@ if form.errors and 'error' not in form.classes:
     form.classes.append('error')
 classes_string = ' '.join(form.classes) 
 %>
-<form ${id|n}action="${action_url}" class="${classes_string}" method="${form.method.lower()}"${enctype|n} accept-charset="utf-8">
+<form ${id|n}action="${action_url}" class="uniForm inlineLabels ${classes_string}" method="${form.method.lower()}"${enctype|n} accept-charset="utf-8">
